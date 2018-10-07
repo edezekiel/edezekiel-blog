@@ -1,0 +1,45 @@
+
+    header {
+      text-align: center;
+      background-size: cover;
+      color: #0CF;
+    }
+    p {
+      text-align: justify;
+    }
+    a {
+      color: white;
+    }
+    h1 {
+      font-size: 35px;
+      text-align: center;
+      color: #0CF;
+    }
+    img {
+      margin: 20px 0px 0px 0px;
+      border: 7px solid #0CF;
+    }
+    ul {
+      padding: 10px;
+      background: #0CF;
+    }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+    article {
+      max-width: 500px;
+      padding: 20px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 36px;
+        padding: 5px;
+      }
+      li {
+        padding: 5px;
+        display: block;
+      }
+    }
