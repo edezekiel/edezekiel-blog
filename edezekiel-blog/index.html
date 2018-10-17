@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127685480-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-127685480-1');
+    </script>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+    <meta name="google-site-verification" content="t9ZBRLjP5cm27BFtbKmq7EqgjDkKGeSTGRsdysgsP_w" />
+    <title>Ed Ezekiel's Software Engineering Blog - Blog</title>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <div class="inner-container">
+        <h1>Ed Ezekiel <br>
+        Software Engineering Blog</h1>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <h1>Navigation Bars, Site Banners, and Google SEO/Analytics</h1>
+        <p>October 17, 2018</p>
+        <p>Flatiron's software engineering immersive program in Atlanta starts in just a few days and I could not be more excited. So excited that I'm doing a mid-week update to the site! The main changes include removing Flexbox (for now), adding a functional navigation bar, adding a "hero banner," and incorporating google analytics.</p>
+
+        <p><dt>Flexbox</dt><dd>I had a lot of fun working with Flexbox while writing my last post. However, I removed the Flexbox display to see how much I could do with just HTML and CSS. As it turns out, everything you see here can be developed without Flexbox.</dd></p>
+        <p><dt>Navigation Bar</dt><dd>Creating the navigation bar took a bit of trial and error. I eventually landed on sleek <a href="https://wearefieldtrip.com/journal/css-horizontal-navigation-bar/">navbar tutorial</a> from Fieldtrip. The instructions were clear and concise.</dd></p>
+        
+        <p><dt>The Banner</dt><dd>A hero banner, like the image above, is a very large banner image used in website design to help engage users. Sites like <a href="https://www.webdesignerdepot.com/">Webdesignerdepot</a> and <a href="https://www.artonicweb.com/learn/hero-images/">artonic</a> have great examples. This <a href="https://www.youtube.com/watch?v=tb_EwQOa_ao">tutorial</a> on youtube was a good guide.</dd></p>
+
+        <p><dt>Google SEO/Analytics</dt><dd>If you right click and "View Page Source," you might notice a "google-site-verification" item in the <code>head</code>. I set up the verification and google analytics for this site after watching <a href="https://www.youtube.com/watch?v=El3IZFGERbM">video by Maile Ohye</a> from google webmasters.</dd></p>
+
+        <p>I hope you enjoyed reading this post. I'll be back soon with more updates about my software engineering journey.</p>
+
+      </article>
+      
+      <article>
+        <h1>CSS Styling & Flexbox</h1>
+        <p>October 12, 2018</p>
+        <p>This week I added some style to my blog using CSS and Flexbox. This post summarizes these concepts and describes how I applied them to my site.</p>
+        <p>CSS stands for Cascading-Style-Sheets. CSS is a language for specifying how documents are presented to users -- how they are styled, laid out, etc.</p>
+        <p>The Flexible Box Module (Flexbox) is a new layout mode that was introduced CSS3. See this article by spaceninja, <a href="https://spaceninja.com/2015/08/24/what-is-flexbox/"><span>"What is Flexbox, An elegant layout method for a more civilized age",</span></a> for a great background on the origin and purpose of Flexbox.</p>
+        <p>When a browser displays a document, it actually displays a combination of the document's content with its style information. Web browsers convert the document's content (the HTML) and style information (CSS) into the Document Object Model (DOM). When you view a webpage you are actually viewing a display of the contents of the DOM.</p>
+        <p>I created the CSS style sheet and linked it to my HMTL file. Then I used a great guide from <a href='https://markheath.net/post/simple-css-blog-layout-flexbox'><span>markheath.net</span></a> to incorporate Flexbox concepts into the CSS and HTML files.</p>
+      </article>
+
+      <article>
+        <h1>How Do I Start a Blog?</h1>
+        <p>October 5, 2018</p>
+          <p>Welcome to the inaugural post! For my first project, I will walk through how I set up this blog. There are four basic steps: (1) choose your web hosting service, (2) pick a domain name, (3) create an html file, and (4) upload the file.</p>
+          <dl>
+            <p><dt>1. Choose a Web Hosting Service</dt>
+            <dd><a href="https://hostingfacts.com/">Hostingfacts.com</a> recently published its list of the "10 Best Web Hosting Services in 2018." They listed Bluehost as #1 for best reliability. After doing a bit more research I decided to go with Bluehost. </dd></p>
+            <p><dt>2. Pick a Domain Name</dt>
+            <dd>My next step was picking a domain name (edezekiel.com).</dd></p>
+            <p><dt>3. Create the HTML File</dt>
+            <dd>I used Sublime to create this html file. I named the file "index.html."</dd></p>
+            <p><dt>4. Upload the HTML File</dt>
+            <dd>This step was my biggest hurdle, but I found a great tutorial on youtube at <a href="https://www.youtube.com/watch?v=XUmfXTnFMuw"><span>dancourses</span></a>. Dan explains the cpanel and File Transfer Protocol (FTP) methods for uploading a HTML file. Cpanel is a linux webhost used by Bluehost and other web hosting services. You can log into cpanel by adding "/cpanel" to the end of your website name (e.g., "www.edezekiel.com/cpanel"). FTP creates a connection between a computer and a hosting account. Cpanel got the job done for now, but I will use FTP as my website grows.</dd></p>
+          </dl>
+          <p>Thank you for reading. I have a lot of exciting posts for this blog coming soon, and I can't wait to see where this project takes me.</p>
+        </article>
+    </main>
+
+    <footer>
+      Last updated October 17, 2018
+    </footer>
+
+  </body>
+</html>
