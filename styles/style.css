@@ -16,10 +16,10 @@ nav a {
 	flex: auto;
 	text-align: center;
 	padding: 10px;
-	font-size: 2rem;
-	background: black;
+	font-size: 3rem;
+	background: #08090d;
 	text-decoration: none;
-	color: white;
+	color: #f6e9cf;
 }
 
 nav a:hover {
@@ -28,7 +28,7 @@ nav a:hover {
 }
 
 header {
-	background-image: url(../images/universe.jpg);
+	background-image: url(../images/lamps.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -37,8 +37,8 @@ header {
 
 header h1 {
 	text-align: center;
-	color: white;
-	font-size: 4rem;
+	font-size: 4.5rem;
+	color: #f6e9cf;
 	margin: 0;
 	padding-top: 15rem;
 }
@@ -48,13 +48,13 @@ main {
 	grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 	grid-template-rows: auto;
 	grid-gap: 0.5rem;
+	margin-top: 2rem;
 }
 
 article {
 	grid-column: span 3;
 	margin: 2rem;
 	background: white;
-	padding: 1.5rem;
 }
 
 article h1 {
@@ -66,9 +66,21 @@ article p, dt, dd {
 	font-size: 2rem;
 }
 
-.headshot {
-	background-color: #E9EBEE;
-	grid-column: span 2;
+.article-picture {
+	background-color: #08090d;
+	color: #f6e9cf;
+	margin: 0;
+	padding: 2rem;
+	height: 15rem;
+}
+
+.article-picture h1 {
+	font-size: 4rem;
+	text-align: center;
+}
+
+.article-content {
+	padding: 0 2rem 2rem 2rem;
 }
 
 article img {
@@ -76,9 +88,33 @@ article img {
 	margin: 0 2rem;
 }
 
+.contact-me {
+	grid-column: span 12;
+	font-size: 2rem;
+	text-align: center;
+	padding: 2rem;
+	text-decoration: none;
+	color: black;
+}
+
+.contact-me a {
+	flex: auto;
+	text-align: center;
+	font-size: 3rem;
+	background: #08090d;
+	text-decoration: none;
+	color: black;
+}
+
+.contact-me a:hover {
+	color: purple;
+}
+
 footer {
 	grid-column: span 12;
 	font-size: 2rem;
 	text-align: center;
 	padding: 2rem;
+	background-color: #08090d;
+	color: #f6e9cf;
 }
