@@ -5,13 +5,10 @@ html {
 
 body {
 	background-color: #E9EBEE;
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: auto;
+	margin: 0;
 }
 
 nav {
-	grid-column: span 12;
 	display: flex;
 }
 
@@ -27,28 +24,61 @@ nav a {
 
 nav a:hover {
 	background: white;
-	color: black
+	color: #292d34;
 }
 
 header {
-	grid-column: span 12;
 	background-image: url(../images/universe.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	height: 35rem;
 }
 
 header h1 {
 	text-align: center;
 	color: white;
-	padding: 10rem;
-	font-size: 3rem;
+	font-size: 4rem;
+	margin: 0;
+	padding-top: 15rem;
 }
 
 main {
-	grid-column: span 12;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+	grid-template-rows: auto;
+	grid-gap: 0.5rem;
+}
+
+article {
+	grid-column: span 3;
+	margin: 2rem;
+	background: white;
+	padding: 1.5rem;
+}
+
+article h1 {
+	font-size: 2.5rem;
+	margin: 0;
+}
+
+article p, dt, dd {
+	font-size: 2rem;
+}
+
+.headshot {
+	background-color: #E9EBEE;
+	grid-column: span 2;
+}
+
+article img {
+	max-width: 40rem;
+	margin: 0 2rem;
 }
 
 footer {
 	grid-column: span 12;
+	font-size: 2rem;
+	text-align: center;
+	padding: 2rem;
 }
