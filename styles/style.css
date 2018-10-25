@@ -4,103 +4,51 @@ html {
 }
 
 body {
-	margin: 0 auto;
 	background-color: #E9EBEE;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: auto;
 }
 
 nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1;
-  background: black;
-	text-align: right;
+	grid-column: span 12;
+	display: flex;
 }
 
-nav ul {
-	padding: 0;
-	width: 100%;
-	margin: 0;
-}
-
-nav ul li {
-	display: inline;
-}
-
-nav ul li a {
-	outline: none;
-	text-decoration: none;
-	display: inline-block;
-	min-width: 12rem;
-	width: 10%;
+nav a {
+	flex: auto;
 	text-align: center;
-	line-height: 2;
+	padding: 10px;
+	font-size: 2rem;
+	background: black;
+	text-decoration: none;
 	color: white;
-	font-size: 2.5rem;
 }
 
-nav ul li a:hover {
+nav a:hover {
 	background: white;
-	color: black;
+	color: black
 }
 
 header {
+	grid-column: span 12;
 	background-image: url(../images/universe.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	font-size: 3rem;
-	height: 35rem;
 }
 
-.inner-container {
+header h1 {
 	text-align: center;
-	width: 100%;
 	color: white;
-	padding-top: 15rem;
-}
-
-.inner-container h2 {
-	margin: 0;
+	padding: 10rem;
+	font-size: 3rem;
 }
 
 main {
-	background: #E9EBEE;
-	padding: 0 2rem 2rem 2rem;
-	line-height: 1.5;
-	font-size: 2.5rem;
-}
-
-main img {
-	max-width: 35rem;
-	float: left;
-	padding: 2rem;
-}
-
-article {
-	background: white;
-	padding: 2rem;
-	margin-top: 5rem;
-	margin-left: 10rem;
-	margin-right: 10rem;
-}
-
-h1 {
-	margin: 0;
-}
-
-h3 {
-	text-align: center;
-	margin: 0;
-}
-
-p {
-	text-align: justify;
+	grid-column: span 12;
 }
 
 footer {
-	text-align: center;
-	padding-bottom: 2rem;
-	font-size: 2.5rem;
+	grid-column: span 12;
 }
