@@ -10,6 +10,7 @@ body {
 
 nav {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 nav a {
@@ -117,4 +118,22 @@ footer {
 	padding: 2rem;
 	background-color: #08090d;
 	color: #f6e9cf;
+}
+
+@media (max-width: 1000px) and (min-width: 400px) {
+	nav a {
+		font-size: 50px;
+	}
+	header h1 {
+		font-size: 75px;
+	}
+	.article-picture h1 {
+		font-size: 50px;
+	}
+	.contact-me {
+		font-size: 40px;
+	}
+	.contact-me a {
+		font-size: 50px;
+	}
 }
