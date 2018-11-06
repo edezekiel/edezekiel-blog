@@ -91,6 +91,14 @@ article p, dt, dd {
 	padding-left: 8rem;
 }
 
+.article-content blockquote {
+	font-size: 2rem;
+}
+
+.article-content code {
+	background: #E9EBEE
+}
+
 .contact-me {
 	grid-column: span 12;
 	font-size: 2rem;
