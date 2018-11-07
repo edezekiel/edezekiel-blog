@@ -53,7 +53,7 @@ main {
 }
 
 article {
-	grid-column: span 3;
+	grid-column: span 12;
 	margin: 2rem;
 	background: white;
 }
