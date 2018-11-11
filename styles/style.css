@@ -99,6 +99,10 @@ article p, dt, dd {
 	background: #E9EBEE
 }
 
+.article-content ul {
+	font-size: 2rem;
+}
+
 .contact-me {
 	grid-column: span 12;
 	font-size: 2rem;
