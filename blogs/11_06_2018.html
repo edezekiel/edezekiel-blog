@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127685480-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-127685480-1');
+    </script>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+    <meta name="google-site-verification" content="t9ZBRLjP5cm27BFtbKmq7EqgjDkKGeSTGRsdysgsP_w" />
+    <title>Edward Ezekiel Software Engineering Blog</title>
+  </head>
+
+  <body>
+
+    <header>
+      <h1>Ed's Bootcamp Blog</h1>
+    </header>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="index.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+
+      <article>
+        <div class="article-picture">
+          <h1>Pry Tips for Ruby Developers</h1>
+        </div>
+        <div class="article-content">
+          <script async src="https://static.addtoany.com/menu/page.js"></script>
+          <!-- AddToAny END -->
+          <p>November 6, 2018</p>
+          <p>Pry is an amazing tool that can supercharge the software
+            development process. Pry is a REPL (Read, Evaluate, Print, and Loop)
+            like rpl.it and IRB. However, Pry has additional features that make
+            it especially helpful for writing and debugging code.</p>
+
+          <p>You may already be familiar with the <code>binding.pry</code>
+            method. If not, check out this <a href="https://www.sitepoint.com/rubyists-time-pry-irb/">
+            Tutorial</a> by Benjamin Tan Wei Hoa.</p>
+
+          <p>Pry's awesome features don't stop there though. You can also
+            navigate through files, lookup relevant methods and documentation,
+            and even trace the stack to hunt down a bug.</p>
+
+          <p><strong>Getting Started - Navigating State with <code>cd</code>,
+            <code>whereami</code>, <code>ls</code>, and <code>exit</code>
+          </strong></p>
+
+          <p>Pry helps you learn how to use advanced features. Here are some
+            tips for accessing these features.</p>
+
+          <p>To get started, it helps to know Pry’s <code>cd</code> method,
+            <code>whereami</code>, and <code>ls</code>. Pry’s cd and ls methods
+            are similar to the terminal commands with the same name. They both
+            help users navigate around files and display directory contents.
+            Type “whereami” in a Pry session to check where you are.</p>
+
+          <p>On to the code - open up a pry session and cd into Pry itself:</p>
+
+          <script src="https://gist.github.com/edezekiel/54c1c0254a26f718da24e19d1202496e.js">
+          </script>
+
+          <p>As you can see from the code above, you are now “inside Pry.” Pry
+            is a program like any other and contains numerous files and
+            Commands. Now,enter <code>ls</code> or <code>help</code> to get a
+            display of all sorts of Pry commands. Enter <code>exit!</code> to
+            back out of your current Pry session.</p>
+
+          <p><strong>Introspection</strong></p>
+
+          <p>Pry’s Introspection methods like <code>show-docs</code> and
+            <code>show-code</code> help you learn background information about
+            the program/class/method that you’re working with.</p>
+
+          <p><strong>Show Documentation - ?</strong></p>
+
+          <p>The Pry command <code>show-docs</code> (or <code>?</code> for
+            short) does exactly what it says: it shows you any relevant
+            documentation for the file you’re working with. This saves you from
+            having to hunt down the docs online. For example, typing ? in Pry
+            will bring up Pry’s docs:</p>
+
+          <script src="https://gist.github.com/edezekiel/2f82d9228047b5110b75d163e2d10360.js"></script>
+
+          <p><strong>Show Sources - $</strong></p>
+
+          <p>As explained on on the Pry <a href="https://github.com/pry/pry/wiki/Source-browsing">wiki:</a>
+            <blockquote cite="https://github.com/pry/pry/wiki/Source-browsing">
+              The code show-source command is capable of showing source code for
+              classes/modules and methods. Simply typing show-source method_name
+               will pull the source for the method and display it with syntax
+               highlighting. As a convenience, Pry looks up both instance
+               methods and class methods using this syntax, with priority given
+               to instance methods.</blockquote>
+            </p>
+
+          <p>Here is an example:</p>
+
+          <script src="https://gist.github.com/edezekiel/35f6c9e4eb895929d18f66737ec398d8.js"></script>
+
+          <p><strong>Pry Stack Explorer</strong></p>
+
+          <p>Pry even lets you explore the stack that you’re working with to
+            trace down tricky bugs. Stack trace methods include <code>up</code>,
+             <code>down</code>,<code>cat --ex</code>, and my personal favorite
+             <code>wtf?</code> This <a href="https://www.sitepoint.com/rubyists-time-pry-irb/">article</a>
+            by Benjamin Tan Wei Hoa provides some great stack trace examples.</p>
+        </div>
+
+      </article>
+
+    </main>
+
+    <footer>
+      Last updated November 2018
+    </footer>
+
+  </body>
+</html>

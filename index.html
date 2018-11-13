@@ -31,222 +31,25 @@
 
     <main>
 
-      <article>
-        <div class="article-picture">
-          <h1>Pry Tips for Ruby Developers</h1>
-        </div>
-        <div class="article-content">
-          <script async src="https://static.addtoany.com/menu/page.js"></script>
-          <!-- AddToAny END -->
-          <p>November 6, 2018</p>
-          <p>Pry is an amazing tool that can supercharge the software
-            development process. Pry is a REPL (Read, Evaluate, Print, and Loop)
-            like rpl.it and IRB. However, Pry has additional features that make
-            it especially helpful for writing and debugging code.</p>
+      <div class="month">
+        <h1>November, 2018</h1>
+        <ul>
+          <li><a href="blogs/11_06_2018.html">Pry Tips for Ruby Developers, 11/06/2018</a></li>
+          <li><a href="blogs/11_02_2018.html">Flatiron Week One, File Transfer Protocol, 11/02/2018</a></li>
+        </ul>
+      </div>
 
-          <p>You may already be familiar with the <code>binding.pry</code>
-            method. If not, check out this <a href="https://www.sitepoint.com/rubyists-time-pry-irb/">
-            Tutorial</a> by Benjamin Tan Wei Hoa.</p>
+      <div class="month">
+        <h1>October, 2018</h1>
 
-          <p>Pry's awesome features don't stop there though. You can also
-            navigate through files, lookup relevant methods and documentation,
-            and even trace the stack to hunt down a bug.</p>
+        <ul>
+          <li><a href="blogs/10_25_2018.html">Implementing CSS Grid, 10/25/2018</a></li>
+          <li><a href="blogs/10_17_2018.html">Navbars and Site Banners, 10/17/2018</a></li>
+          <li><a href="blogs/10_12_2018.html">CSS Styling Using Flexbox, 10/12/2018</a></li>
+          <li><a href="blogs/10_05_2018.html">How Do I Start a Blog?, 10/05/2018</a></li>
+        </ul>
+      </div>
 
-          <p><strong>Getting Started - Navigating State with <code>cd</code>,
-            <code>whereami</code>, <code>ls</code>, and <code>exit</code>
-          </strong></p>
-
-          <p>Pry helps you learn how to use advanced features. Here are some
-            tips for accessing these features.</p>
-
-          <p>To get started, it helps to know Pry’s <code>cd</code> method,
-            <code>whereami</code>, and <code>ls</code>. Pry’s cd and ls methods
-            are similar to the terminal commands with the same name. They both
-            help users navigate around files and display directory contents.
-            Type “whereami” in a Pry session to check where you are.</p>
-
-          <p>On to the code - open up a pry session and cd into Pry itself:</p>
-
-          <script src="https://gist.github.com/edezekiel/54c1c0254a26f718da24e19d1202496e.js">
-          </script>
-
-          <p>As you can see from the code above, you are now “inside Pry.” Pry
-            is a program like any other and contains numerous files and
-            Commands. Now,enter <code>ls</code> or <code>help</code> to get a
-            display of all sorts of Pry commands. Enter <code>exit!</code> to
-            back out of your current Pry session.</p>
-
-          <p><strong>Introspection</strong></p>
-
-          <p>Pry’s Introspection methods like <code>show-docs</code> and
-            <code>show-code</code> help you learn background information about
-            the program/class/method that you’re working with.</p>
-
-          <p><strong>Show Documentation - ?</strong></p>
-
-          <p>The Pry command <code>show-docs</code> (or <code>?</code> for
-            short) does exactly what it says: it shows you any relevant
-            documentation for the file you’re working with. This saves you from
-            having to hunt down the docs online. For example, typing ? in Pry
-            will bring up Pry’s docs:</p>
-
-          <script src="https://gist.github.com/edezekiel/2f82d9228047b5110b75d163e2d10360.js"></script>
-
-          <p><strong>Show Sources - $</strong></p>
-
-          <p>As explained on on the Pry <a href="https://github.com/pry/pry/wiki/Source-browsing">wiki:</a>
-            <blockquote cite="https://github.com/pry/pry/wiki/Source-browsing">
-              The code show-source command is capable of showing source code for
-              classes/modules and methods. Simply typing show-source method_name
-               will pull the source for the method and display it with syntax
-               highlighting. As a convenience, Pry looks up both instance
-               methods and class methods using this syntax, with priority given
-               to instance methods.</blockquote>
-            </p>
-
-          <p>Here is an example:</p>
-
-          <script src="https://gist.github.com/edezekiel/35f6c9e4eb895929d18f66737ec398d8.js"></script>
-
-          <p><strong>Pry Stack Explorer</strong></p>
-
-          <p>Pry even lets you explore the stack that you’re working with to
-            trace down tricky bugs. Stack trace methods include <code>up</code>,
-             <code>down</code>,<code>cat --ex</code>, and my personal favorite
-             <code>wtf?</code> This <a href="https://www.sitepoint.com/rubyists-time-pry-irb/">article</a>
-            by Benjamin Tan Wei Hoa provides some great stack trace examples.</p>
-        </div>
-
-      </article>
-      <article>
-        <div class="article-picture">
-          <h1>Flatiron Week One, File Transfer Protocol</h1>
-        </div>
-        <div class="article-content">
-          <p>November 2, 2018</p>
-
-          <p>I'm in week one of the Flatiron bootcamp! I'm writing this on
-            Friday afternoon.</p>
-
-          <p>My substantive update for this post is that I finally implemented
-            (Safe) File Transfer Protocol. I used a guide from
-            <a href="https://kb.iu.edu/d/akom">Indiana University</a>. SFTP
-            makes uploading the website files much faster.
-          </p>
-          <p>So much has happened in five days, but here are some of my main
-          thoughts:</p>
-          <p><dt>Cohort</dt>
-            <dd>The first cohort is small.</dd>
-            <dd>There are 7 other people in cohort (Kwam, Andy, Blair, Cory, Paris, Will,
-              and Kaeland).</dd>
-            </p>
-          <p><dt>Topics</dt>
-            <dd>We went straight to Ruby, Git, and Bash.</dd>
-            <dd></dd>
-          <p><dt>Schedule</dt>
-            <dd>Classes really do run from 9:00 a.m. until 6:00 p.m.</dd>
-            <dd>I haven't left campus before 6:30 p.m.</dd>
-            </p>
-          <p><dt>Homework</dt>
-            <dd>The instructors deploy new labs after class gets out.</dd>
-            <dd>We used concepts from those labs the next day.</dd></p>
-          <p><dt>Pair Programing</dt>
-            <dd>We've already used pair programming.</dd>
-            <dd>Yesterday, we paired up to work on a lab. We learned how pair programming
-              traditionally involves a "navigator" and a "driver," and got the chance to
-              implement this process to solve a lab.</dd>
-            </p>
-          <p><dt>Active Learning</dt>
-            <dd>Most of the day is spent on active learning.</dd>
-            <dd>There are lectures, but they only last for an hour or two in the mornings.</dd>
-            <dd> We spend the rest of the day working on labs and helping each other out
-              with debugging.</dd>
-            </p>
-        </div>
-      </article>
-      <article>
-        <div class="article-picture">
-          <h1>CSS Grid</h1>
-        </div>
-        <div class="article-content">
-          <p>October 25, 2018</p>
-
-          <p>T-minus five days until I start the Flatiron bootcamp. I took a break
-          from some Git exercise to bring you all this update!</p>
-
-          <p>I have made a lot of changes to this site under the hood. Mainly, I
-          converted the content section to the CSS "grid" display style.
-          I also switched the navbar back to using Flexbox.</p>
-
-          <p>If you're on a laptop or desktop, expand the browser to full screen
-          and you'll notice that blog posts now line up in rows and columns. On a
-          mobile device, the posts will collapse into a single column. This is all
-          thanks to CSS Grid!</p>
-
-          <p>Now that the main content is laid out in a grid system, it will be
-          much easier to make the website more "responsive." I'll cover responsive
-          web design in more detail soon.</p>
-
-          <p>Thank you for reading and have a great week. </p>
-        </div>
-      </article>
-
-      <article>
-        <div class="article-picture">
-          <h1>Navbars and Site Banners</h1>
-        </div>
-
-        <div class="article-content">
-          <p>October 17, 2018</p>
-          <p>Flatiron's software engineering immersive program in Atlanta starts in just a few days and I could not be more excited. So excited that I'm doing a mid-week update to the site! The main changes include removing Flexbox (for now), adding a functional navigation bar, adding a "hero banner," and incorporating google analytics.</p>
-
-          <p><dt>Flexbox</dt><dd>I had a lot of fun working with Flexbox while writing my last post. However, I removed the Flexbox display to see how much I could do with just HTML and CSS's normal flow. As it turns out, everything you see here can be developed without Flexbox.</dd></p>
-          <p><dt>Navigation Bar</dt><dd>Creating the navigation bar took a bit of trial and error. I eventually landed on sleek <a href="https://wearefieldtrip.com/journal/css-horizontal-navigation-bar/">navbar tutorial</a> from Fieldtrip. The instructions were clear and concise.</dd></p>
-
-          <p><dt>The Banner</dt><dd>A hero banner, like the image above, is a very large banner image used in website design to help engage users. Sites like <a href="https://www.webdesignerdepot.com/">Webdesignerdepot</a> and <a href="https://www.artonicweb.com/learn/hero-images/">artonic</a> have great examples. This <a href="https://www.youtube.com/watch?v=tb_EwQOa_ao">tutorial</a> on youtube was a good guide.</dd></p>
-
-          <p><dt>Google Analytics</dt><dd>If you right click and "View Page Source," you might notice a "google-site-verification" item in the <code>head</code>. I set up the verification and google analytics for this site after watching <a href="https://www.youtube.com/watch?v=El3IZFGERbM">video by Maile Ohye</a> from google webmasters.</dd></p>
-
-          <p>I hope you enjoyed reading this post. I'll be back soon with more updates about my software engineering journey.</p>
-        </div>
-      </article>
-
-      <article>
-        <div class="article-picture">
-          <h1>CSS Styling Using Flexbox</h1>
-        </div>
-        <div class="article-content">
-          <p>October 12, 2018</p>
-          <p>This week I added some style to my blog using CSS and Flexbox. This post summarizes these concepts and describes how I applied them to my site.</p>
-          <p>CSS stands for Cascading-Style-Sheets. CSS is a language for specifying how documents are presented to users -- how they are styled, laid out, etc.</p>
-          <p>The Flexible Box Module (Flexbox) is a new layout mode that was introduced CSS3. See this article by spaceninja, <a href="https://spaceninja.com/2015/08/24/what-is-flexbox/"><span>"What is Flexbox, An elegant layout method for a more civilized age",</span></a> for a great background on the origin and purpose of Flexbox.</p>
-          <p>When a browser displays a document, it actually displays a combination of the document's content with its style information. Web browsers convert the document's content (the HTML) and style information (CSS) into the Document Object Model (DOM). When you view a webpage you are actually viewing a display of the contents of the DOM.</p>
-          <p>I created the CSS style sheet and linked it to my HMTL file. Then I used a great guide from <a href='https://markheath.net/post/simple-css-blog-layout-flexbox'><span>markheath.net</span></a> to incorporate Flexbox concepts into the CSS and HTML files.</p>
-        </div>
-
-      </article>
-
-      <article>
-        <div class="article-picture">
-          <h1>How Do I Start a Blog?</h1>
-        </div>
-        <div class="article-content">
-          <p>October 5, 2018</p>
-            <p>Welcome to the inaugural post! For my first project, I will walk through how I set up this blog. There are four basic steps: (1) choose your web hosting service, (2) pick a domain name, (3) create an html file, and (4) upload the file.</p>
-            <dl>
-              <p><dt>1. Choose a Web Hosting Service</dt>
-              <dd><a href="https://hostingfacts.com/">Hostingfacts.com</a> recently published its list of the "10 Best Web Hosting Services in 2018." They listed Bluehost as #1 for best reliability. After doing a bit more research I decided to go with Bluehost. </dd></p>
-              <p><dt>2. Pick a Domain Name</dt>
-              <dd>My next step was picking a domain name (edezekiel.com).</dd></p>
-              <p><dt>3. Create the HTML File</dt>
-              <dd>I used Sublime to create this html file. I named the file "index.html."</dd></p>
-              <p><dt>4. Upload the HTML File</dt>
-              <dd>This step was my biggest hurdle, but I found a great tutorial on youtube at <a href="https://www.youtube.com/watch?v=XUmfXTnFMuw"><span>dancourses</span></a>. Dan explains the cpanel and File Transfer Protocol (FTP) methods for uploading a HTML file. Cpanel is a linux webhost used by Bluehost and other web hosting services. You can log into cpanel by adding "/cpanel" to the end of your website name (e.g., "www.edezekiel.com/cpanel"). FTP creates a connection between a computer and a hosting account. Cpanel got the job done for now, but I will use FTP as my website grows.</dd></p>
-            </dl>
-            <p>Thank you for reading. I have a lot of exciting posts for this blog coming soon, and I can't wait to see where this project takes me.</p>
-        </div>
-
-        </article>
     </main>
 
     <footer>
