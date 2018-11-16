@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127685480-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-127685480-1');
+    </script>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+    <meta name="google-site-verification" content="t9ZBRLjP5cm27BFtbKmq7EqgjDkKGeSTGRsdysgsP_w" />
+    <title>Edward Ezekiel Software Engineering Blog</title>
+  </head>
+
+  <body>
+
+    <header>
+      <h1>Ed's Bootcamp Blog</h1>
+    </header>
+    <nav>
+      <a href="../about.html">About</a>
+      <a href="../index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+
+    <main>
+
+      <article>
+        <div class="article-picture">
+          <h1>Groupie - My First CLI</h1>
+        </div>
+        <div class="article-content">
+          <script async src="https://static.addtoany.com/menu/page.js"></script>
+          <!-- AddToAny END -->
+          <p>November 16, 2018</p>
+
+          <p>This week I wrote my first Command Line Interface! It's callled
+          "Groupie," and it helps people get tickets to see their favorite
+          concerts.</p>
+
+          <p>Here is the <a href="https://github.com/edezekiel/groupie">Github link</a>
+           to the source code in case you are interested in taking a look.</p>
+
+          <p><strong>Video Walkthrough</strong></p>
+
+          <p>Let's jump right in. Here is a video walkthrough showing Groupie's
+          basic features: </p>
+
+          <script id="asciicast-7rcvL0AnlFtJsblXxn797XWco" src="https://asciinema.org/a/7rcvL0AnlFtJsblXxn797XWco.js" async></script>
+
+          <p></p>
+          <p><strong>Organizing the Run File Using Screens</strong></p>
+
+          <p>As you may have noticed during the walkthrough, Groupie has serval
+          "menus" or "screens." Different screens can be accessed at different
+          times throught the execution of the file. Each screen lets the user
+          interact with some aspect of the CLI. For example, the "greeting screen"
+          welcomes the user and provides basic instructions.</p>
+
+          <p>These are the different screens:</p>
+
+          <ul>
+            <li>Greeting;</li>
+            <li>Concert list;</li>
+            <li>Individual concert information;</li>
+            <li>Ticketing;</li>
+            <li>Band list;</li>
+            <li>Individual band information; and </li>
+            <li>Exit - allowing the user to exit at any time.</li>
+          </ul>
+
+          <p>The trickiest part was getting the exit screen and the ticketing
+          screens to work. I wanted to user to be able to exit the prgogram at
+          any time and the buy tickets at several different points.</p>
+
+          <p><strong>Formatting - Pastel and Separators</strong></p>
+
+          <p>I stylized Groupie using the "pastel" gem. I also created a method
+          called "separators" that was responsible for inserting line breaks
+          between each screen.</p>
+
+          <p><strong>ActiveRecord</strong></p>
+
+          <p>I used the ActiveRecord gem to streamline several aspects of the program.
+          This gem helps with creating and updating databases, creating associations
+          between classes, and inheriting all kinds of built-in methods.</p>
+
+        </div>
+
+      </article>
+
+    </main>
+
+    <footer>
+      Last updated November 2018
+    </footer>
+
+  </body>
+</html>
