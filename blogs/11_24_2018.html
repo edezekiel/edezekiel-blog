@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127685480-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-127685480-1');
+    </script>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+    <meta name="google-site-verification" content="t9ZBRLjP5cm27BFtbKmq7EqgjDkKGeSTGRsdysgsP_w" />
+    <title>Edward Ezekiel Software Engineering Blog</title>
+  </head>
+
+  <body>
+
+    <header>
+      <h1>Ed's Bootcamp Blog</h1>
+    </header>
+    <nav>
+      <a href="../about.html">About</a>
+      <a href="../index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+
+    <main>
+
+      <article>
+        <div class="article-picture">
+          <h1>Kaizoku - My First Ruby Gem</h1>
+        </div>
+        <div class="article-content">
+          <script async src="https://static.addtoany.com/menu/page.js"></script>
+          <!-- AddToAny END -->
+          <p>November 24, 2018</p>
+
+          <p>I had so much fun building Groupie that I decided to build another
+            CLI! This time I wanted to incorporate web scraping and turn my CLI
+            into a Ruby Gem. The result is Kaizoku.</p>
+
+          <p>Kaizoku means "pirate" in Japanese. Kaizoku scours the internet for the
+            best Ruby gems.</p>
+
+          <p>Here is the <a href="https://github.com/edezekiel/kaizoku">Github link</a>
+           to the source code.</p>
+
+          <p><strong>Video Walkthrough</strong></p>
+
+          <p><script id="asciicast-KOVQnUkhHl41LQE7nCAWzehQ7" src="https://asciinema.org/a/KOVQnUkhHl41LQE7nCAWzehQ7.js" async></script></p>
+
+          <p><strong>Installing Kaizoku</strong></p>
+
+          <p>If you visit rubygems.org and search for Kaizoku, you will see my gem!
+            Here is a direct <a href="https://rubygems.org/gems/kaizoku">link</a>.
+            You can also use the terminal to search for and install the gem by
+            typing <code>gem search kaizoku</code> and <code>gem install kaizoku</code>.
+          </p>
+
+          <p><strong>Making a Gem</strong></p>
+            <p>There are a ton of helpful guides on
+            <a href="https://guides.rubygems.org/make-your-own-gem/">rubygems.org</a>.
+            Their guides walk you through making your first gem and publishing it
+            to the site.</p>
+
+            <p>The trickiest part for me was pushing the gem to RubyGems.org.
+            I kept on getting an error that had something to do with a "changelog."
+            After some quick googling, I realized that a changelog is simply a
+            .md file you add to the gem. The changelog.md file is where you
+            record notable changes to the project. My changelog's is based on
+            <a href="https://keepachangelog.com/en/1.0.0/">Keep a ChangeLog</a>
+            template.</p>
+          <p></p>
+
+          <p><strong>Web Scraping with Nokogiri</strong></p>
+
+          <p>Nokogiri is Ruby gem that fetches and parses HTML documents (a web scraper).
+          Kaizoku uses Nokogiri to scrape ruby-toolbox.com. Here an example of the
+          code used to return a list of categorized gems:
+
+          <script src="https://gist.github.com/edezekiel/3dcd50dfdb1391938850bfc79ba0ae6e.js"></script>
+
+          </p>
+
+        </div>
+
+      </article>
+
+    </main>
+
+    <footer>
+      Last updated November 2018
+    </footer>
+
+  </body>
+</html>

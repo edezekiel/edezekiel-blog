@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127685480-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-127685480-1');
+    </script>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+    <meta name="google-site-verification" content="t9ZBRLjP5cm27BFtbKmq7EqgjDkKGeSTGRsdysgsP_w" />
+    <title>Edward Ezekiel Software Engineering Blog</title>
+  </head>
+
+  <body>
+
+    <header>
+      <h1>Ed's Bootcamp Blog</h1>
+    </header>
+    <nav>
+      <a href="../about.html">About</a>
+      <a href="../index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+
+    <main>
+
+      <article>
+        <div class="article-picture">
+          <h1>Ruby on Rails - Why form_for Uses Instance Variables</h1>
+        </div>
+        <div class="article-content">
+          <script async src="https://static.addtoany.com/menu/page.js"></script>
+          <!-- AddToAny END -->
+          <p>December 2, 2018</p>
+
+          <p>TLDR - we need an instance variable because <code>form_for</code>
+          wont work without it.</p>
+
+          <p>The past weeks have flown by. At Flatiron, we've moved from learning
+           Ruby, to building Command Line Interfaces, to Sinatra, and now Rails.</p>
+
+           <p><strong>My "ah-ha" Moment.</strong></p>
+
+           <p>This article is about the my favorite "ah-ha" moment from this week:
+           when I finally understood why we need to use an instance variable in
+            <code>form_for</code>. Below is an example using <code>form_for</code>
+            and <code>collection_select</code> to build a new employee form:</p>
+
+          <p><script src="https://gist.github.com/edezekiel/4f7f4e34a235f909f9c785ad545c4efa.js"></script></p>
+
+
+          <p><dt><strong>What's Going on in This Example?</strong></dt></p>
+
+          <p>
+            <dd><code>form_for</code>: this is our view helper.</dd><br>
+            <dd><code>@employee</code>: see the section below.*</dd><br>
+            <dd><code>f.</code>: the form_for method yields a form builder object (the f variable).</dd><br>
+            <dd><code>collection_select</code>: this is a pre-defined rails form-building method, called on f.</dd><br>
+            <dd><code>dog_id</code>: save the user’s input (whatever it is) in the params[:id].</dd><br>
+            <dd><code>@dogs</code>: this kind of object will appear in the drop down menu.</dd><br>
+            <dd><code>:id</code>: save the id of whatever dog the user selects.</dd><br>
+            <dd><code>:name</code>: show dog names to the user in the drop down menu.</dd>
+          </p>
+
+
+          <p><strong>@employee</strong></p>
+
+          <p>In our example above, the new form starts off empty.
+          The user then fills out the form and clicks submit.</p>
+
+          <p>Take a moment to think about what happens next in the lifecycle
+          of the form. What data is being posted? Where did it come from?
+           How is it being manipulated by our controller?</p>
+
+           <p><strong>Explanation</strong></p>
+
+           <p>The <code>form_for</code> tag isn't magic. It render the html
+              in the browser. Html <code>form</code>
+              Html form tags have action and method attributes that specify
+              what route to take next and what to do with data entered into the form.</p>
+
+            <p>Here, form_for gathers the data entered in the form and stores it
+              in the instance variable @employee.
+              Then, rails transmits that data to the next route (edit) as params.</p>
+
+              <p>Because form_for gathers data in an instance variable, our params
+              can easily be destructed on the edit page and used to post a new
+              employee to the database.</p>
+
+        </div>
+
+      </article>
+
+    </main>
+
+    <footer>
+      Last updated December 2018
+    </footer>
+
+  </body>
+</html>
