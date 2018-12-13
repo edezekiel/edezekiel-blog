@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127685480-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-127685480-1');
+    </script>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+    <meta name="google-site-verification" content="t9ZBRLjP5cm27BFtbKmq7EqgjDkKGeSTGRsdysgsP_w" />
+    <title>Edward Ezekiel Software Engineering Blog</title>
+  </head>
+
+  <body>
+
+    <header>
+      <h1>Ed's Bootcamp Blog</h1>
+    </header>
+    <nav>
+      <a href="../about.html">About</a>
+      <a href="../index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+
+    <main>
+
+      <article>
+        <div class="article-picture">
+          <h1>Where is the DOM?</h1>
+        </div>
+        <div class="article-content">
+          <script async src="https://static.addtoany.com/menu/page.js"></script>
+          <!-- AddToAny END -->
+          <p>December 13, 2018</p>
+
+          <p> <strong>TLDR:</strong> the brower parses an html file, creates the DOM, and stores
+            the DOM in memory.</p>
+
+          <p>My blog post this week deals with the Document Object Model (DOM).
+            If you are not familiar with this concept, mozilla has a great explainer
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">here</a>.
+          </p>
+
+          <p>At Flatiron, we've discussed what the DOM is, why it's important, and how to access
+           it. However, we haven't address where the DOM is stored.
+           For some reason I found this topic especially interesting this week.
+           This blog post
+           is about my journey searching for and reaching the answer to that question.</p>
+
+          <p><strong>Down the Rabbit Hole - <code>window</code> and <code>document</code> </strong></p>
+
+          <p>My journey started with an exercise from a JavaScript instructional video on Youtube.</p>
+          <p> I recently watched the "JavaScript: Understanding the Weird Parts"
+          <a href="https://www.youtube.com/watch?v=Bv_5Zv5c-Ts">video</a> by Tony Alicia.
+          If you skip to 29:00, he creates and opens an empy "app.js" file
+          in the browser. The app.js file strangely has zero code written in it.</p>
+
+          <p>After opening the browser, Tony launches chrome's dev console and
+            enters the word <code>window</code>. A window property with hundreds
+            of key/value pairs seemingly appears out of nowhere. Entering
+            <code>document</code> in the console for a blank site similarly yields
+            some kind of pre-defined property.
+          </p>
+
+          <p>According to <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window">MDN</a>,
+            "the <code>window</code> interface represents a window containing a
+            DOM document; the <code>document</code> property points to the DOM
+            document <strong>loaded</strong> in that window."</p>
+
+          <p><strong>Loaded From Where?</strong></p>
+
+          <p></p>
+          <p>As MDN explains above, the browser "loads" the <code>document</code>
+            into the window. But where is the DOM loaded from?</p>
+
+          <p>After some googling I landed on this answer from <a href="https://reactkungfu.com/2015/10/the-difference-between-virtual-dom-and-dom/">React Kung Fu</a>:
+            <blockquote cite="https://reactkungfu.com/2015/10/the-difference-between-virtual-dom-and-dom/">
+              "So, while HTML is a text, the DOM is an <strong>in-memory representation</strong>
+              of this text."
+            </blockquote>
+          </p>
+
+          <p>In other words, the browser stores the DOM in RAM. My next question
+            was how?</p>
+
+          <p><strong>The Rendering Engine - How HTML Gets Transformed Into the DOM</strong></p>
+
+          <p><a href="https://link.medium.com/V8nfg6ioBS">Here's</a> an excerpt from
+            a post on medium that answers how the DOM gets loaded into memory:
+            <blockquote cite="https://link.medium.com/V8nfg6ioBS">
+              The browser's rendering engine receives the contents of the requested
+              document from the networking layer. The first step of the rendering
+              engine is parsing the HTML document and converting the parsed
+              elements to actual DOM nodes in a DOM tree.
+            </blockquote>
+            </p>
+
+          <p>This process can be broken down further into "conversion,"
+           "tokenizing", "lexing", and DOM "construction." See <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model">this</a>
+           article by Google Web for more info.</p>
+
+        <p><strong>One Last Experiment With JavaScript Runtime Environments</strong></p>
+
+          <p>Google Chrome's Javascript Engine is called <a href="https://v8.dev/">V8</a>.
+          V8 is also used a JavaScript runtime environment called
+          <a href="https://nodejs.org/en/">Node.js</a>.</p>
+
+          <p>Unlike Chrome, Node.js does not run in the browser. It didn't make
+          sense to me to have a DOM without a browser, but I wanted to confirm.
+          I started Node.js by entering <code>node</code> in my terminal, and
+          then I entered <code>document</code>. As I expected, the terminal returned
+          <code>ReferenceError: document is not defined</code>.
+
+        </div>
+
+      </article>
+
+    </main>
+
+    <footer>
+      Last updated December 2018
+    </footer>
+
+  </body>
+</html>
