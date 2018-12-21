@@ -40,32 +40,30 @@
           <!-- AddToAny END -->
           <p>December 13, 2018</p>
 
-          <p> <strong>TLDR:</strong> the brower parses an html file, creates the DOM, and stores
+          <p> <strong>TLDR:</strong> the browser parses an html file, creates the DOM, and stores
             the DOM in memory.</p>
 
           <p>My blog post this week deals with the Document Object Model (DOM).
-            If you are not familiar with this concept, mozilla has a great explainer
+            If you are not familiar with this concept, Mozilla has a great explainer
             <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">here</a>.
           </p>
 
           <p>At Flatiron, we've discussed what the DOM is, why it's important, and how to access
-           it. However, we haven't address where the DOM is stored.
+           it. However, we haven't addressed where the DOM is stored, or how it gets there.
            For some reason I found this topic especially interesting this week.
-           This blog post
-           is about my journey searching for and reaching the answer to that question.</p>
+           This blog post is about my journey exploring this topic.</p>
 
           <p><strong>Down the Rabbit Hole - <code>window</code> and <code>document</code> </strong></p>
 
-          <p>My journey started with an exercise from a JavaScript instructional video on Youtube.</p>
           <p> I recently watched the "JavaScript: Understanding the Weird Parts"
           <a href="https://www.youtube.com/watch?v=Bv_5Zv5c-Ts">video</a> by Tony Alicia.
-          If you skip to 29:00, he creates and opens an empy "app.js" file
-          in the browser. The app.js file strangely has zero code written in it.</p>
+          If you skip to 29:00, he creates and opens an empty "app.js" file
+          in the browser. The app.js file is completely empty.</p>
 
           <p>After opening the browser, Tony launches chrome's dev console and
-            enters the word <code>window</code>. A window property with hundreds
-            of key/value pairs seemingly appears out of nowhere. Entering
-            <code>document</code> in the console for a blank site similarly yields
+            enters the word <code>window</code>. Somehow, the console returned a
+            <code>window</code> property that contained hundreds of key/value pairs.
+            Entering <code>document</code> in the console for a blank site similarly yields
             some kind of pre-defined property.
           </p>
 
@@ -78,7 +76,8 @@
 
           <p></p>
           <p>As MDN explains above, the browser "loads" the <code>document</code>
-            into the window. But where is the DOM loaded from?</p>
+            into the window. But where is the DOM? How does <code>document</code>
+            know where to look?</p>
 
           <p>After some googling I landed on this answer from <a href="https://reactkungfu.com/2015/10/the-difference-between-virtual-dom-and-dom/">React Kung Fu</a>:
             <blockquote cite="https://reactkungfu.com/2015/10/the-difference-between-virtual-dom-and-dom/">
@@ -118,6 +117,7 @@
           then I entered <code>document</code>. As I expected, the terminal returned
           <code>ReferenceError: document is not defined</code>.
 
+          <p>I hope you enjoyed reading this post!</p>
         </div>
 
       </article>
