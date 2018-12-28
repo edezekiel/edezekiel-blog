@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127685480-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-127685480-1');
+    </script>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+    <meta name="google-site-verification" content="t9ZBRLjP5cm27BFtbKmq7EqgjDkKGeSTGRsdysgsP_w" />
+    <title>Edward Ezekiel Software Engineering Blog</title>
+  </head>
+
+  <body>
+
+    <header>
+      <h1>Ed's Bootcamp Blog</h1>
+    </header>
+    <nav>
+      <a href="../about.html">About</a>
+      <a href="../index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+
+    <main>
+
+      <article>
+        <div class="article-picture">
+          <h1>fetch() - A Line-By-Line Walkthrough</h1>
+        </div>
+        <div class="article-content">
+          <script async src="https://static.addtoany.com/menu/page.js"></script>
+          <!-- AddToAny END -->
+          <p>December 21, 2018</p>
+
+          <p>Learning the <code>fetch</code> API can be a struggle. It certainly
+            was for me. Even when I got it working I had trouble explaining why
+            it worked.</p>
+
+          <!-- <iframe src="https://giphy.com/embed/MEAErCpMjFhn2" width="480" height="450" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/dog-plays-MEAErCpMjFhn2">via GIPHY</a></p> -->
+
+          <iframe src="https://giphy.com/embed/2Faz1ANKPPUY4XhT2" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+          <p>This article walks through each line of a simple fetch example in an
+            attempt to demystify the process. I pulled example code from a
+            <a href="https://scotch.io/tutorials/how-to-use-the-javascript-fetch-api-to-get-data">tutorial</a>
+            on scotch.io. I loved this tutorial, and I definitely recommend working through it!
+          </p>
+
+          <p> <strong>Let's get started.</strong></p>
+
+          <p>Here is an example of a simple fetch request:</p>
+          <p><script src="https://gist.github.com/edezekiel/da0b953efa76baaadfcfb05b83fee2a0.js"></script></p>
+
+          <p>As discussed in the scotch.io tutorial, this example fetches data
+            about "authors" from an API, and calls a function that adds those
+            authors to the page.</p>
+
+          <p><strong><code>Line 1: fetch(url)</code></strong></p>
+
+          <p>The first line initiates a GET request (by default) to a url.
+          This generates <strong>promise one</strong>, and returns that promise.</p>
+
+          <p><strong><code>Line 2: .then((resp) => resp.json())</code></strong></p>
+
+          <p>The second line is a callback. It runs after promise one is complete.
+          This line should get the value from the fetch (a response). By default, the
+          response is text.</p>
+
+          <p>We want to convert the text to json, so we accept the response as
+            an argument to another function and call .json() method to parse it.</p>
+
+          <p>Parsing the text in our example to json happens almost instantaneously.
+          However, this process could take several seconds if there is a lot of data to parse.</p>
+
+          <p>Just like we don't want to hold up the browser waiting on a server to
+          return a response, we don't want to hold up the browser waiting on
+          parsing text into json.</p>
+
+          <p>Therefore, this line returns <strong>promise two</strong>.</p>
+
+          <p><strong><code>Line 3: .then(function(data) {//someFunction})})</code></strong></p>
+
+          <p>By line three the json parsing is complete. We finally have a real
+           JavaScript object with data that we can work with. Now we can pass that
+           data into another function and process it in some way. </p>
+
+          <p> <strong>Final Thoughts</strong> </p>
+
+          <p>Remember that any function that returns a promise, has to throw something on the callback
+          queue to process the result when it's ready.</p>
+
+        </div>
+
+      </article>
+
+    </main>
+
+    <footer>
+      Last updated December 2018
+    </footer>
+
+  </body>
+</html>
