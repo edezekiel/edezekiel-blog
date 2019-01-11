@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127685480-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-127685480-1');
+    </script>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+    <meta name="google-site-verification" content="t9ZBRLjP5cm27BFtbKmq7EqgjDkKGeSTGRsdysgsP_w" />
+    <title>Edward Ezekiel Software Engineering Blog</title>
+  </head>
+
+  <body>
+
+    <header>
+      <h1>Ed's Bootcamp Blog</h1>
+    </header>
+    <nav>
+      <a href="../about.html">About</a>
+      <a href="../index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+
+    <main>
+
+      <article>
+        <div class="article-picture">
+          <h1>Mod 3 Flatiron Project - Coffee Break</h1>
+        </div>
+        <div class="article-content">
+          <script async src="https://static.addtoany.com/menu/page.js"></script>
+          <!-- AddToAny END -->
+          <p>January 4, 2019</p>
+
+          <p>January marks the beginning of 2019 and the end of mod 3. This mod has been
+            the most challenging yet. As I discussed in my last blog post, it
+            took me a while to wrap my head around several mod 3 concepts.</p>
+
+          <p>After weeks of debugging, practicing, and coding, I have finally
+            completed my mod 3 project! Here are links to the <a href="https://github.com/edezekiel/frontend-coffee-bulma">frontend</a>
+            and <a href="https://github.com/edezekiel/backend-coffee-bulma">backend</a>.</p>
+
+          <p>This post is about my key takeaways from the past few weeks.</p>
+
+          <strong><p>Know When To Take A Step Back</p></strong>
+
+          <p>Going to a coding bootcamp can feel like a cramming session.
+          Labs stack up, project deadlines get closer, and study sessions run late.
+          Even so, it is incredibly important to take breaks.</p>
+
+          <p>This project really tested my mental endurance, which is why
+          taking breaks was critical. It helped that Christmas and New Year's
+          fell in the middle of the mod. They helped/forced me to take a step
+          back from the code. After a few days of rest the concepts started
+          coming together.</p>
+
+          <strong><p>Thoughts on External APIs (Use Faker Instead)</p></strong>
+
+          <p>At the beginning of my project I considered using an external API
+          like yelp fusion. Their API is really easy to use and the documentation
+          is great.</p>
+
+          <p>Notably, you can make yelp API requests without having to
+          set up advanced OAuth2 tokens. OAuth2 tokens are important, but beyond
+          the scope of my project.</p>
+
+          <p>I got as far as seeding my rails database with data from yelp API.
+          Eventually, though, I used the Ruby gem "Faker" to create my seed data.</p>
+
+          <strong><p>Faker</p></strong>
+
+          <p>Faker is amazing. It lets you build seed data amazingly fast with
+          just a few lines of code. You don't have to learn API-specific rules,
+          set up OAuth tokens, or manually create object instances.</p>
+
+          <p>Here is the entirety of my db.seed file for my mod 3 project:</p>
+
+          <script src="https://gist.github.com/edezekiel/c6e848bf0371855c0e850ad79064ff11.js"></script>
+
+          <p>With this seed file, I had enough data to test my rails associations
+          and render my website.</p>
+
+          <strong><p>Bulma</p></strong>
+
+          <p>I decided to switch up my CSS framework for this project. Bulma is
+            modern and based around the CSS
+          Flexbox feature. My feelings about Bulma are mixed.</p>
+
+          <p>Pros:</p>
+            <ol>
+              <li>It is incredibly easy to get set up. Just paste <a href="https://gist.github.com/edezekiel/41e3fc3e0bf229043d192d4260d94898">this</a> header.</li>
+              <li>The standard configurations make it easy to set up a hero
+              banner, navBar, footer, etc.</li>
+              <li>The features look good.</li>
+            </ol>
+          <p>Cons</p>
+            <ol>
+              <li>The documentation is a little bit sparse;</li>
+              <li>It was surprisingly difficult to implement a basic flex wrap
+              system for "cards" or "tiles." At a few points I was tempted
+              to ditch the framework and just code the CSS using Flexbox.</li>
+              <li>Setting up event handlers on "form" buttons was a nightmare.
+              I didn't have problem getting the event listeners to work before
+              adding Bulma, but afterwards it took hours of debugging.</li>
+            </ol>
+
+        </div>
+
+      </article>
+
+    </main>
+
+    <footer>
+      Last updated January 2019
+    </footer>
+
+  </body>
+</html>
